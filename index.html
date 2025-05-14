@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca de Componentes</title>
     <link rel="stylesheet" href="styles.css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <script src="scripts.js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
@@ -19,18 +17,104 @@
     </header>
 
     <main>
+        <!-- Botões reutilizáveis -->
         <section id="buttons">
             <h2>Botões</h2>
-            <div class="button-group">
+            <div class="button-container">
                 <button class="btn-primary">Salvar</button>
                 <button class="btn-secondary">Cancelar</button>
                 <button class="btn-download">Download</button>
                 <button class="btn-sign">Sign Up</button>
             </div>
         </section>
+
+        <section id="modal-example">
+            <h2>Modais</h2>
+
+            <!-- Botão para abrir o primeiro modal -->
+            <button class="btn-modal-action open-modal">Abrir Modal 1</button>
+
+            <!-- Primeiro Modal -->
+            <div class="modal-group">
+                <div class="modal-overlay"></div>
+                <div class="modal">
+                    <div class="modal-content">
+                        <p>Este é o primeiro modal de exemplo.</p>
+                        <button class="btn-modal-action close-modal">Fechar Modal</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão para abrir o segundo modal -->
+            <button class="btn-modal-2 open-modal-2">Abrir Modal 2</button>
+
+            <!-- Segundo Modal -->
+            <div class="modal-group">
+                <div class="modal-overlay modal-overlay-2"></div>
+                <div class="modal modal-2">
+                    <div class="modal-content">
+                        <p>Este é o segundo modal com estilo personalizado.</p>
+                        <button class="btn-modal-2 close-modal-2">Fechar Modal</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tooltips -->
+        <section id="tooltips">
+            <h2>Tooltips</h2>
+            <div class="tooltips-group">
+                <!-- Tooltip acima -->
+                <p class="tooltip tooltip-top" data-tooltip="Tooltip acima">Passe o mouse aqui
+
+                </p>
+
+                <!-- Tooltip à direita -->
+                <p class="tooltip tooltip-right" data-tooltip="Tooltip à direita">Passe o mouse aqui</p>
+
+                <!-- Tooltip à esquerda -->
+                <p class="tooltip tooltip-left" data-tooltip="Tooltip à esquerda">Passe o mouse aqui</p>
+
+                <p class="tooltip tooltip-bottom" data-tooltip="Tooltip abaixo">Passe o mouse aqui </p>
+            </div>
+        </section>
+
+
+
+        <!-- Switches  -->
+        <section id="switch">
+            <h2>Switches</h2>
+            <div class="switch-group">
+                <!-- Switch Modelo 1 -->
+                <label class="switch switch-model-1">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <!-- Switch Modelo 2 -->
+                <label class="switch switch-model-2">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </section>
+        <!-- Spinner -->
+        <section id="spinner">
+            <h2>Spinner de Carregamento</h2>
+            <div class="spinner-container">
+                <div class="spinner-group">
+                    <div class="spinner"></div>
+                    <p>Carregando...</p>
+                </div>
+                <div class="spinner-reverse">
+                    <div class="spin-reverse"></div>
+                    <p>Em andamento...</p>
+                </div>
+            </div>
+            
+        </section>
     </main>
 
-    <script src="scripts.js/scripts.js"></script>
+    <script src="scripts.js/main.js"></script>
 
 </body>
 

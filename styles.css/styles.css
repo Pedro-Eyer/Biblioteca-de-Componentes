@@ -1,19 +1,560 @@
-.btn-primary {
-    font-family: Roboto, sans-serif;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 14px;
-    width: 100px;
-    height: 40px;
-    padding: 10px 14px;
-    cursor: pointer;
-}
-.button-group {
-    display: block;
-    flex-direction: row;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
- 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* Espaçamento entre os cards (seções) */
+section {
+    margin-bottom: 30px; /* Adiciona um espaçamento abaixo de cada seção */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border: 1px solid #ddd; /* Adiciona uma borda leve para destacar os cards */
+    border-radius: 8px; /* Arredonda os cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    background-color: white; /* Define um fundo branco para os cards */
+}
+
+/* Layout geral */
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-bottom: 50px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+/* Botões */
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button-container {
+    display: flex;
+    flex-direction: column; /* Organiza os tooltips verticalmente */
+    gap: 10px; /* Espaçamento entre os tooltips */
+    justify-content: center; /* Centraliza os tooltips */
+    align-items: center; /* Alinha os tooltips verticalmente */
+    height: 100%; /* Altura total do contêiner */
+    width: 200px;
+    margin: 0 auto;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: rgb(121, 82, 179);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: rgb(99, 60, 156);
+}
+.btn-primary:active {
+    transform: scale(0.95); /* Reduz ligeiramente o botão ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+.btn-primary:focus {
+    outline: 2px solid rgb(121, 82, 179);; /* Adiciona uma borda verde ao botão focado */
+    outline-offset: 2px; /* Cria um pequeno espaçamento entre o botão e a borda */
+}
+/* Botão Secondary */
+.btn-secondary {
+    background-color: white;
+    color: rgb(10, 102, 194);
+    border: 1px solid rgb(10, 102, 194);
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(226, 240, 254);
+}
+.btn-secondary:active {
+    transform: translateY(2px); /* Move o botão ligeiramente para baixo */
+    background: linear-gradient(to bottom, rgb(226, 240, 254), rgb(200, 220, 250)); /* Adiciona um gradiente ao fundo */
+    border-color: rgb(8, 80, 160); /* Altera a cor da borda */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra interna */
+}
+
+/* Botão Download */
+.btn-download {
+    background-color: white;
+    color: rgb(108, 117, 125);
+    border: 1px solid rgb(108, 117, 125);
+}
+
+.btn-download:hover {
+    background-color: rgb(108, 117, 125);
+    color: white;
+}
+.btn-download:active {
+    transform: scale(0.95); /* Reduz ligeiramente o botão ao clicar */
+    background-color: rgb(90, 100, 110); /* Altera a cor de fundo ao clicar */
+    color: white; /* Altera a cor do texto ao clicar */
+}
+
+/* Botão Sign up */
+.btn-sign {
+    background-color: rgb(255, 216, 20);
+    border-radius: 15px;
+}
+
+.btn-sign:hover {
+    background-color: rgb(245, 205, 3);
+}
+.btn-sign span {
+    margin-right: 8px; /* Adiciona espaçamento entre o ícone e o texto */
+}
+.btn-sign:active {
+    transform: scale(0.9); /* Reduz o tamanho ao clicar */
+    background-color: rgb(230, 190, 10); /* Altera a cor de fundo */
+    box-shadow: 0 0 10px rgb(255, 216, 20); /* Adiciona um brilho ao redor */
+}
+.btn-sign:focus {
+    outline: 2px solid rgb(255, 216, 20); /* Adiciona uma borda amarela */
+    outline-offset: 4px;
+    box-shadow: 0 0 8px rgba(255, 216, 20, 0.5); /* Adiciona um brilho amarelo ao redor */
+}
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        gap: 10px; /* Reduz o espaçamento entre os botões */
+    }
+
+    button {
+        width: 100%; /* Faz os botões ocuparem toda a largura do contêiner */
+    }
+}
+
+/* Overlay do Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    z-index: 999;
+    display: none; /* Esconde o overlay inicialmente */
+}
+.modal-group {
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo de cada modal */
+}
+/* Modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px; /* Arredonda os cantos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    z-index: 1000;
+    display: none; /* Esconde o modal inicialmente */
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    text-align: center;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.modal-content .close-modal {
+    margin-top: 10px;
+}
+/* Botão para Abrir e Fechar o Modal */
+.btn-modal-action {
+    background-color: #007bff; /* Fundo azul */
+    color: white; /* Texto branco */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Arredonda os cantos */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de clique */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+
+.btn-modal-action:hover {
+    background-color: #0056b3; /* Fundo azul escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+}
+
+.btn-modal-action:active {
+    transform: scale(0.95); /* Reduz ligeiramente o botão ao clicar */
+    background-color: #003f7f; /* Fundo ainda mais escuro ao clicar */
+}
+/* Botão para Abrir e Fechar o Modal 2 */
+.btn-modal-2 {
+    background-color: #ff5722; /* Fundo laranja */
+    color: white; /* Texto branco */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Arredonda os cantos */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de clique */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+
+.btn-modal-2:hover {
+    background-color: #e64a19; /* Fundo laranja escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+}
+
+.btn-modal-2:active {
+    transform: scale(0.95); /* Reduz ligeiramente o botão ao clicar */
+    background-color: #d84315; /* Fundo ainda mais escuro ao clicar */
+}
+/* Overlay do Modal 2 */
+.modal-overlay-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 87, 34, 0.7); /* Fundo laranja semitransparente */
+    z-index: 999;
+    display: none; /* Esconde o overlay inicialmente */
+}
+/* Modal 2 */
+.modal-2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffe0b2; /* Fundo laranja claro */
+    padding: 30px;
+    border-radius: 12px; /* Arredonda mais os cantos */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+    z-index: 1000;
+    display: none; /* Esconde o modal inicialmente */
+    animation: fadeInScale 0.4s ease-in-out; /* Animação de entrada */
+
+}
+
+/* Conteúdo do Modal 2 */
+.modal-2 .modal-content {
+    text-align: center;
+    color: #d84315; /* Texto laranja escuro */
+    font-size: 18px;
+}
+
+/* Tooltip Base */
+.tooltip {
+    position: relative; /* Define o elemento como referência para o tooltip */
+    display: inline-block; /* Exibe o elemento como um bloco inline */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    padding: 3px 8px; /* Adiciona espaçamento interno */
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333; /* Texto escuro */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 4px; /* Arredonda os cantos */
+    font-weight: bold; /* Texto em negrito */
+    justify-content: center; /* Centraliza o texto */
+    align-items: center; /* Alinha o texto verticalmente */
+    width: 150px; /* Largura fixa para os tooltips */
+    margin-top: 10px; /* Espaçamento acima do tooltip */
+    margin-bottom: 10px; /* Espaçamento abaixo do tooltip */
+   
+}
+.tooltips-group {
+    display: flex;
+    flex-direction: column; /* Organiza os tooltips verticalmente */
+    gap: 10px; /* Espaçamento entre os tooltips */
+    justify-content: center; /* Centraliza os tooltips */
+    align-items: center; /* Alinha os tooltips verticalmente */
+    height: 100%; /* Altura total do contêiner */
+    width: 200px;
+    margin: 0 auto; /* Centraliza o contêiner na tela */
+    
+}
+
+/* Estilo Geral para o Tooltip */
+.tooltip::after {
+    font-weight: normal; /* Texto normal */
+    content: attr(data-tooltip); /* Insere o texto do atributo "data-tooltip" */
+    position: absolute; /* Posiciona o texto em relação ao elemento pai */
+    padding: 5px 8px; /* Espaçamento interno */
+    border-radius: 4px; /* Arredonda os cantos */
+    font-size: 12px; /* Tamanho da fonte */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    opacity: 0; /* Torna o tooltip invisível inicialmente */
+    visibility: hidden; /* Garante que o tooltip não seja clicável */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave */
+    z-index: 9999;
+}
+
+.tooltip-top::after {
+    bottom: 100%; /* Posiciona o tooltip acima do elemento */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
+    background-color: #4caf50; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: 2px solid #2e7d32; /* Borda verde escura */
+}
+
+.tooltip-top:hover::after {
+    opacity: 1; /* Torna o tooltip visível */
+    visibility: visible; /* Garante que o tooltip seja visível */
+    transform: translateX(-50%) translateY(-10px); /* Move o tooltip mais para cima */
+}
+
+.tooltip-bottom::after {
+    top: 100%; /* Posiciona o tooltip abaixo do elemento */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
+    background-color: #ff5722; /* Fundo laranja */
+    color: white; /* Texto branco */
+    border: 2px solid #e64a19; /* Borda laranja escura */
+}
+
+.tooltip-bottom:hover::after {
+    opacity: 1; /* Torna o tooltip visível */
+    visibility: visible; /* Garante que o tooltip seja visível */
+    transform: translateX(-50%) translateY(10px); /* Move o tooltip mais para baixo */
+}
+.tooltip-left::after {
+    right: 100%; /* Posiciona o tooltip à esquerda do elemento */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar perfeitamente */
+    background-color: #2196f3; /* Fundo azul */
+    color: white; /* Texto branco */
+    border: 2px solid #0d47a1; /* Borda azul escura */
+}
+
+.tooltip-left:hover::after {
+    opacity: 1; /* Torna o tooltip visível */
+    visibility: visible; /* Garante que o tooltip seja visível */
+    transform: translateY(-50%) translateX(-10px); /* Move o tooltip mais para a esquerda */
+}
+.tooltip-right::after {
+    left: 100%; /* Posiciona o tooltip à direita do elemento */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar perfeitamente */
+    background-color: #9c27b0; /* Fundo roxo */
+    color: white; /* Texto branco */
+    border: 2px solid #6a1b9a; /* Borda roxa escura */
+}
+
+.tooltip-right:hover::after {
+    opacity: 1; /* Torna o tooltip visível */
+    visibility: visible; /* Garante que o tooltip seja visível */
+    transform: translateY(-50%) translateX(10px); /* Move o tooltip mais para a direita */
+}
+
+
+/* Grupo de Switches */
+.switch-group {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os switches */
+    justify-content: center; /* Centraliza os switches horizontalmente */
+    align-items: center; /* Centraliza os switches verticalmente */
+}
+
+/* Estilo Base do Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0; /* Torna o input invisível */
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Cor padrão do switch */
+    transition: 0.4s; /* Transição suave */
+    border-radius: 25px; /* Torna o switch arredondado */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%; /* Torna o botão circular */
+}
+
+input:checked + .slider {
+    background-color: #4caf50; /* Cor do switch ativado */
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px); /* Move o botão para a direita */
+}
+/* Switch Modelo 1 */
+.switch-model-1 .slider {
+    background: linear-gradient(45deg, #ff5722, #ff9800); /* Gradiente laranja */
+}
+
+input:checked + .slider {
+    background: linear-gradient(45deg, #4caf50, #8bc34a); /* Gradiente verde */
+}
+/* Switch Modelo 2 */
+.switch-model-2 {
+    width: 60px; /* Largura do switch */
+    height: 30px; /* Altura do switch */
+}
+
+.switch-model-2 .slider {
+    background-color: #e0e0e0; /* Fundo cinza claro */
+    border-radius: 4px; /* Cantos levemente arredondados */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+.switch-model-2 .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px; /* Altura do botão */
+    width: 24px; /* Largura do botão */
+    left: 3px; /* Distância inicial da borda esquerda */
+    bottom: 3px; /* Distância inicial da borda inferior */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 4px; /* Cantos levemente arredondados */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transições suaves */
+}
+
+/* Estilo do switch ativado */
+.switch-model-2 input:checked + .slider {
+    background-color: #673ab7; /* Fundo roxo ao ativar */
+}
+
+.switch-model-2 input:checked + .slider:before {
+    transform: translateX(30px); /* Move o botão para a direita */
+    background-color: #d1c4e9; /* Fundo roxo claro para o botão */
+}
+
+
+
+
+
+
+
+
+
+/* Spinner */
+.spinner-container {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os spinners */
+    flex-direction: column; /* Organiza os spinners verticalmente */
+    justify-content: center; /* Centraliza o spinner horizontalmente */
+    align-items: center; /* Centraliza o spinner verticalmente */
+}
+.spinner-group {
+    display: flex;
+    justify-content: center; /* Centraliza o spinner horizontalmente */
+    align-items: center; /* Centraliza o spinner verticalmente */
+    height: 100px; /* Define uma altura para o grupo do spinner */
+}
+
+.spinner {
+    width: 50px; /* Largura do spinner */
+    height: 50px; /* Altura do spinner */
+    border: 5px solid #f3f3f3; /* Define a borda externa (cinza claro) */
+    border-top: 5px solid #4caf50; /* Define a borda superior (verde) */
+    border-radius: 50%; /* Torna o spinner circular */
+    animation: spin 1s linear infinite; /* Adiciona a animação de rotação */
+}
+.spinner-group p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    color: #4caf50;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Começa sem rotação */
+    }
+    to {
+        transform: rotate(360deg); /* Gira 360 graus */
+    }
+}
+/* Spinner reverse */
+.spinner-reverse {
+    display: flex;
+    justify-content: center; /* Centraliza o spinner horizontalmente */
+    align-items: center; /* Centraliza o spinner verticalmente */
+    height: 100px; /* Define uma altura para o grupo do spinner */
+}
+.spin-reverse {
+    width: 50px; /* Largura do spinner */
+    height: 50px; /* Altura do spinner */
+    border: 5px solid #f3f3f3; /* Define a borda externa (cinza claro) */
+    border-top: 5px solid hsl(266, 64%, 41%); /* Define a borda superior (verde) */
+    border-radius: 50%; /* Torna o spinner circular */
+    animation: spin-reverse 2s linear infinite; /* Adiciona a animação de rotação */
+}
+
+.spinner-reverse p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    color: hsl(266, 64%, 41%);
+}
+@keyframes spin-reverse {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
