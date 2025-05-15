@@ -22,9 +22,50 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
     background-color: white; /* Define um fundo branco para os cards */
 }
+/* Menu de Navegação */
+#main-nav {
+    position: fixed; /* Fixa o menu no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4caf50; /* Fundo verde */
+    color: rgb(226, 2, 2);
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
 
+#main-nav ul {
+    display: flex;
+    justify-content: center; /* Centraliza os itens do menu */
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+#main-nav ul li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+#main-nav ul li a {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+#main-nav ul li a:hover {
+    color: #c8e6c9; /* Cor mais clara ao passar o mouse */
+}
+html {
+    scroll-behavior: smooth; /* Ativa a rolagem suave */
+}
+#main-nav ul li a.active {
+    color: #ffeb3b; /* Cor amarela para o link ativo */
+    text-decoration: underline; /* Adiciona sublinhado ao link ativo */
+}
 /* Layout geral */
 header {
+    margin-top: 45px; /* Espaçamento acima do cabeçalho */
     background-color: #4caf50;
     color: white;
     padding: 20px;
@@ -43,17 +84,19 @@ section {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding-bottom: 50px;
+    padding: 60px 20px; /* Espaçamento interno maior */
+
 }
 
 h2 {
     margin-bottom: 20px;
     font-weight: bold;
     color: #4caf50;
+    font-size: 2rem;
+    text-align: center; /* Centraliza o título */
 }
 
 /* Botões */
-
 button {
     padding: 10px 20px;
     border: none;
@@ -483,12 +526,6 @@ input:checked + .slider {
 
 
 
-
-
-
-
-
-
 /* Spinner */
 .spinner-container {
     display: flex;
@@ -557,4 +594,31 @@ input:checked + .slider {
     }
 }
 
+/* Estilo do Footer */
+#main-footer {
+    background-color: #4caf50; /* Fundo verde */
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 30px; /* Espaçamento acima do footer */
+    font-size: 14px; /* Tamanho da fonte */
+    border-top: 2px solid #388e3c; /* Linha superior */
+}
+
+/* Links do Footer */
+.footer-links {
+    margin-top: 10px; /* Espaçamento acima dos links */
+}
+
+.footer-links a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    margin: 0 10px; /* Espaçamento horizontal entre os links */
+    font-weight: bold; /* Texto em negrito */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+.footer-links a:hover {
+    color: #c8e6c9; /* Cor mais clara ao passar o mouse */
+}
 
