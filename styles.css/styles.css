@@ -13,16 +13,6 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Espaçamento entre os cards (seções) */
-section {
-    margin-bottom: 30px; /* Adiciona um espaçamento abaixo de cada seção */
-    padding: 20px; /* Adiciona espaçamento interno */
-    border: 1px solid #ddd; /* Adiciona uma borda leve para destacar os cards */
-    border-radius: 8px; /* Arredonda os cantos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
-    background-color: white; /* Define um fundo branco para os cards */
-}
-
 /* Layout geral */
 header {
     background-color: #4caf50;
@@ -39,12 +29,12 @@ main {
 }
 
 section {
-    background: white;
+    margin-bottom: 30px;
+    padding: 40px 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 50px;
-
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
 h2 {
@@ -63,7 +53,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    display: grid;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -554,3 +544,35 @@ input:checked + .slider {
 }
 
 
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Uma única coluna em telas menores */
+    }
+
+    button {
+        width: 100%; /* Botões ocupam toda a largura */
+    }
+
+    section {
+        padding: 20px; /* Reduz o espaçamento interno */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2rem; /* Reduz ainda mais o tamanho do título */
+    }
+
+    button {
+        font-size: 14px; /* Reduz o tamanho da fonte dos botões */
+    }
+
+    section {
+        padding: 15px; /* Reduz ainda mais o espaçamento interno */
+    }
+}
