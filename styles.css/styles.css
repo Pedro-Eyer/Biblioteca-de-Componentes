@@ -278,13 +278,14 @@ button:hover {
 
 .tooltip {
     position: relative;
+    font-size: 13px;
     display: inline-block;
     cursor: pointer;
-    padding: 3px 8px;
-    background-color: #f9f9f9;
-    color: #333;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: rgb(186, 186, 186);
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 2px;
     font-weight: bold;
     justify-content: center;
     align-items: center;
@@ -540,6 +541,150 @@ input:checked + .slider {
     }
 }
 
+
+/* Estilo Base do Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dropdown-button:hover {
+    background-color: #388e3c;
+}
+
+.caret {
+    margin-left: 8px;
+    font-size: 12px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown que abre para baixo */
+.dropdown-down .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+.dropdown-down:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-down:hover .caret {
+    transform: rotate(180deg);
+}
+
+/* Dropdown que abre para o lado */
+.dropdown-side .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1000;
+    white-space: nowrap;
+    transform: translateX(10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.dropdown-side:hover .caret {
+    transform: rotate(90deg);
+}
+
+/* Estilo das Opções do Menu */
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Divisores */
+.dropdown-divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 5px 0;
+    width: 100%;
+    border-top: 1px dashed #ddd;
+}
+/* Footer */
+#main-footer {
+    background-color: #4caf50; /* Fundo verde */
+    color: white; /* Texto branco */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 30px; /* Espaçamento acima do footer */
+    font-size: 14px; /* Tamanho da fonte */
+    border-top: 2px solid #388e3c; /* Linha superior */
+}
+
+.footer-container {
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os elementos */
+}
+
+.footer-links {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Exibe os links em linha */
+    gap: 15px; /* Espaçamento entre os links */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Texto em negrito */
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+.footer-links li a:hover {
+    color: #c8e6c9; /* Cor mais clara ao passar o mouse */
+}
+/* responsividade */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;

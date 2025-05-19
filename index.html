@@ -36,7 +36,7 @@
                 <button class="btn-modal-action open-modal">Abrir Modal 1</button>
                 <button class="btn-modal-2 open-modal-2">Abrir Modal 2</button>
             </div>
-            
+
             <!-- Primeiro Modal -->
             <div class="modal-group">
                 <div class="modal-overlay"></div>
@@ -111,12 +111,55 @@
                     <p>Em andamento...</p>
                 </div>
             </div>
-            
+
+        </section>
+        <section id="dropdown-menus">
+            <h2>Menus Suspensos</h2>
+            <div class="button-container">
+                <!-- Dropdown que abre para baixo -->
+                <div class="dropdown dropdown-down">
+                    <button class="dropdown-button">
+                        Menu Para Baixo <span class="caret">&#9660;</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Opção 1</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a href="#">Opção 2</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a href="#">Opção 3</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Dropdown que abre para o lado -->
+                <div class="dropdown dropdown-side">
+                    <button class="dropdown-button">
+                        Menu Lateral <span class="caret">&#9654;</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Opção A</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a href="#">Opção B</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a href="#">Opção C</a></li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
     <script src="scripts.js/main.js"></script>
 
 </body>
+<footer id="main-footer">
+    <div class="footer-container">
+        <p>&copy; 2025 Biblioteca de Componentes UI. Todos os direitos reservados.</p>
+        <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tooltips">Tooltips</a></li>
+            <li><a href="#spinner">Spinner</a></li>
+            <li><a href="#switch">Switches</a></li>
+        </ul>
+    </div>
+</footer>
 
 </html>
