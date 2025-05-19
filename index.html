@@ -32,8 +32,11 @@
             <h2>Modais</h2>
 
             <!-- Botão para abrir o primeiro modal -->
-            <button class="btn-modal-action open-modal">Abrir Modal 1</button>
-
+            <div class="button-container">
+                <button class="btn-modal-action open-modal">Abrir Modal 1</button>
+                <button class="btn-modal-2 open-modal-2">Abrir Modal 2</button>
+            </div>
+            
             <!-- Primeiro Modal -->
             <div class="modal-group">
                 <div class="modal-overlay"></div>
@@ -44,10 +47,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Botão para abrir o segundo modal -->
-            <button class="btn-modal-2 open-modal-2">Abrir Modal 2</button>
-
             <!-- Segundo Modal -->
             <div class="modal-group">
                 <div class="modal-overlay modal-overlay-2"></div>
@@ -63,7 +62,7 @@
         <!-- Tooltips -->
         <section id="tooltips">
             <h2>Tooltips</h2>
-            <div class="tooltips-group">
+            <div class="button-container">
                 <!-- Tooltip acima -->
                 <p class="tooltip tooltip-top" data-tooltip="Tooltip acima">Passe o mouse aqui
 
@@ -84,7 +83,7 @@
         <!-- Switches  -->
         <section id="switch">
             <h2>Switches</h2>
-            <div class="switch-group">
+            <div class="button-container">
                 <!-- Switch Modelo 1 -->
                 <label class="switch switch-model-1">
                     <input type="checkbox">
@@ -97,10 +96,12 @@
                 </label>
             </div>
         </section>
+
+
         <!-- Spinner -->
         <section id="spinner">
             <h2>Spinner de Carregamento</h2>
-            <div class="spinner-container">
+            <div class="button-container">
                 <div class="spinner-group">
                     <div class="spinner"></div>
                     <p>Carregando...</p>
