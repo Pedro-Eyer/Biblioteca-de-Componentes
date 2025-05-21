@@ -883,60 +883,92 @@ input:checked + .slider {
 
 
 
-/* Cards */
-
-#info-cards h2 {
-    color: #4caf50;
-    margin-bottom: 20px;
-}
-/* Estilo dos Cards */
+/* Estilo Geral para os Cards */
 .card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 250px;
-    text-align: center;
+    border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    max-height: 140px;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-/* Estilo Individual para Cada Card */
+
+/* Card 1: Estilo com Borda Lateral */
 .card-1 {
-    background-color: #e3f2fd; /* Azul claro */
-    border-color: #2196f3; /* Azul */
+    background-color: #f9f9f9;
+    border-left: 5px solid #4caf50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
 }
 
 .card-1 h3 {
-    color: #2196f3;
+    color: #4caf50;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
+.card-1 p {
+    color: #333;
+    font-size: 14px;
+}
+
+/* Card 2: Estilo com Gradiente e Texto Centralizado */
 .card-2 {
-    background-color: #e8f5e9; /* Verde claro */
-    border-color: #4caf50; /* Verde */
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
 }
 
 .card-2 h3 {
-    color: #4caf50;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
+.card-2 p {
+    font-size: 14px;
+}
+
+/* Card 3: Estilo Moderno com Ícone Decorativo */
 .card-3 {
-    background-color: #fff3e0; /* Laranja claro */
-    border-color: #ff9800; /* Laranja */
+    background: linear-gradient(135deg, #ff5722, #ff8a50);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-3::before {
+    content: "★"; /* Ícone decorativo */
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.2); /* Ícone translúcido */
+    transform: rotate(15deg);
 }
 
 .card-3 h3 {
-    color: #ff9800;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.card-3 p {
+    font-size: 14px;
+    color: #fce4ec;
+}
+
 
 
 
