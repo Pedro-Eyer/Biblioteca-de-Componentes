@@ -41,10 +41,238 @@ h2 {
     margin-bottom: 1.5rem;
     font-weight: bold;
     color: #4caf50;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
+    white-space: nowrap;
+}
+/* Botão de Título */
+.title-button {
+    display: block; /* Faz o botão ocupar toda a largura disponível */
+    margin: 0 auto 20px auto; /* Centraliza o botão e adiciona espaçamento abaixo */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte para parecer um título */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #4caf50; /* Cor do texto */
+    background: none; /* Remove o fundo padrão do botão */
+    border: 2px solid #4caf50; /* Adiciona uma borda verde */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de clique */
+    text-align: center; /* Centraliza o texto */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
+.title-button:hover {
+    transform: scale(1.05); /* Amplia ligeiramente ao passar o mouse */
+    background-color: #4caf50; /* Adiciona um fundo verde */
+    color: white; /* Altera a cor do texto para branco */
+}
+
+.title-button:active {
+    transform: scale(1); /* Remove a ampliação ao clicar */
+    background-color: #388e3c; /* Fundo verde mais escuro */
+    color: white; /* Mantém o texto branco */
+}
+/* popup do codigo  */
+/* Overlay do Popup */
+.doc-popup-overlay {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    z-index: 999; /* Coloca o overlay abaixo do popup */
+    transition: opacity 0.3s ease; /* Transição suave para o efeito de escurecimento */
+    opacity: 0;
+}
+/* Exibir o overlay quando o popup estiver ativo */
+.doc-popup-overlay.show {
+    display: block;
+    opacity: 1; /* Torna o overlay visível */
+}
+/* Exibir o overlay quando o popup estiver ativo */
+.doc-popup.show + .doc-popup-overlay {
+    display: block;
+    opacity: 1;
+}
+/* Popup Genérico */
+.doc-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para o popup */
+}
+/* Estilo para os blocos de código */
+.code-sections {
+    margin-top: 20px;
+}
+
+.code-sections h5 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #4caf50;
+}
+
+.code-sections pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.code-sections code {
+    font-family: monospace;
+    color: #d63384;
+}
+/* Exibir o popup com animação */
+.doc-popup.show {
+    display: block;
+    opacity: 1; /* Torna o popup visível */
+    transform: translate(-50%, -50%);
+}
+.doc-popup-content {
+    text-align: left;
+    position: relative;
+}
+
+.doc-popup-content h3 {
+    margin-bottom: 10px;
+    color: #4caf50;
+}
+
+.doc-popup-content pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.doc-popup-content code {
+    font-family: monospace;
+    color: #d63384;
+}
+
+.close-doc {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close-doc:hover {
+    color: #4caf50;
+}
+
+.copy-code-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.copy-code-btn:hover {
+    background-color: #388e3c;
+}
+
+/* container dos exemplos a serem copiados */
+.example-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+/* Contêiner dos Botões de Exemplo */
+.example-buttons {
+    display: flex; /* Alinha os botões lado a lado */
+    flex-wrap: wrap; /* Permite que os botões quebrem linha se necessário */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-bottom: 20px; /* Espaçamento abaixo do grupo de botões */
+    justify-content: flex-start; /* Alinha os botões à esquerda */
+}
+
+/* Estilo dos Botões de Exemplo */
+.example-buttons button {
+    padding: 8px 12px; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de clique */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid #ddd; /* Borda leve */
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333; /* Cor do texto */
+}
+
+.example-buttons button:hover {
+    background-color: #4caf50; /* Fundo verde ao passar o mouse */
+    color: white; /* Texto branco ao passar o mouse */
+    transform: scale(1.05); /* Amplia ligeiramente ao passar o mouse */
+}
+
+.example-buttons button:active {
+    transform: scale(0.95); /* Reduz ligeiramente ao clicar */
+    background-color: #388e3c; /* Fundo verde mais escuro */
+}
+
+
+/* Contêiner para os botões */
+.button-group {
+    display: flex; /* Alinha os botões lado a lado */
+    justify-content: flex-end; /* Alinha os botões à direita */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 10px; /* Espaçamento acima do grupo de botões */
+}
+
+/* Botões */
+.copy-code-btn,
+.close-doc {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.copy-code-btn:hover,
+.close-doc:hover {
+    background-color: #388e3c;
+}
 button {
     padding: 10px 20px;
     border: none;
@@ -71,7 +299,7 @@ button {
 button:hover {
     transform: scale(1.05);
 }
-
+/* Button Primary */
 .btn-primary {
     background-color: rgb(121, 82, 179);
     color: white;
@@ -617,8 +845,14 @@ input:checked + .slider {
     opacity: 0;
 }
 
+.dropdown-side:hover .dropdown-menu {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+}
+
 .dropdown-side:hover .caret {
-    transform: rotate(90deg);
+    transform: rotate(100deg);
 }
 
 /* Estilo das Opções do Menu */
@@ -645,6 +879,146 @@ input:checked + .slider {
     margin: 5px 0;
     width: 100%;
     border-top: 1px dashed #ddd;
+}
+
+
+
+/* Cards */
+
+#info-cards h2 {
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+/* Estilo dos Cards */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Estilo Individual para Cada Card */
+.card-1 {
+    background-color: #e3f2fd; /* Azul claro */
+    border-color: #2196f3; /* Azul */
+}
+
+.card-1 h3 {
+    color: #2196f3;
+}
+
+.card-2 {
+    background-color: #e8f5e9; /* Verde claro */
+    border-color: #4caf50; /* Verde */
+}
+
+.card-2 h3 {
+    color: #4caf50;
+}
+
+.card-3 {
+    background-color: #fff3e0; /* Laranja claro */
+    border-color: #ff9800; /* Laranja */
+}
+
+.card-3 h3 {
+    color: #ff9800;
+}
+
+
+
+
+#progress-bars h2 {
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+/* Container das Barras */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Wrapper de Cada Barra */
+.progress-wrapper {
+    text-align: left;
+}
+
+.progress-wrapper p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo Base da Barra de Progresso */
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    transition: width 0.3s ease;
+}
+
+/* Estilo 1: Básico */
+.progress-bar-primary .progress {
+    background-color: #007bff;
+}
+
+/* Estilo 2: Listras Estilizadas */
+.progress-bar-striped .progress {
+    background: repeating-linear-gradient(
+        45deg,
+        #28a745,
+        #28a745 10px,
+        #34d058 10px,
+        #34d058 20px
+    );
+}
+
+/* Estilo 3: Animação de Preenchimento */
+.progress-bar-animated .progress {
+    background-color: #ffc107;
+    animation: fillProgress 1.5s ease-in-out;
+}
+
+@keyframes fillProgress {
+    from {
+        width: 0;
+    }
+    to {
+        width: 30%;
+    }
+}
+
+/* Estilo 4: Gradiente */
+.progress-bar-gradient .progress {
+    background: linear-gradient(90deg, #ff5722, #ff9800);
 }
 /* Footer */
 #main-footer {
@@ -723,3 +1097,4 @@ input:checked + .slider {
         max-height: 600px;
     }
 }
+

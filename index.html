@@ -19,7 +19,7 @@
     <main>
         <!-- Botões reutilizáveis -->
         <section id="buttons">
-            <h2>Botões</h2>
+            <button class="open-doc title-button">Botões</button>
             <div class="button-container">
                 <button class="btn-primary">Salvar</button>
                 <button class="btn-secondary">Cancelar</button>
@@ -27,9 +27,9 @@
                 <button class="btn-sign">Sign Up</button>
             </div>
         </section>
-
+        <!-- Modais -->
         <section id="modal-example">
-            <h2>Modais</h2>
+            <button class="open-doc title-button">Modais</button>
 
             <!-- Botão para abrir o primeiro modal -->
             <div class="button-container">
@@ -61,7 +61,7 @@
 
         <!-- Tooltips -->
         <section id="tooltips">
-            <h2>Tooltips</h2>
+            <button class="open-doc title-button">Tooltips</button>
             <div class="button-container">
                 <!-- Tooltip acima -->
                 <p class="tooltip tooltip-top" data-tooltip="Tooltip acima">Passe o mouse aqui
@@ -82,7 +82,7 @@
 
         <!-- Switches  -->
         <section id="switch">
-            <h2>Switches</h2>
+            <button class="open-doc title-button">Switches</button>
             <div class="button-container">
                 <!-- Switch Modelo 1 -->
                 <label class="switch switch-model-1">
@@ -100,7 +100,7 @@
 
         <!-- Spinner -->
         <section id="spinner">
-            <h2>Spinner de Carregamento</h2>
+            <button class="open-doc title-button">Spinners</button>
             <div class="button-container">
                 <div class="spinner-group">
                     <div class="spinner"></div>
@@ -113,9 +113,24 @@
             </div>
 
         </section>
+
+        <!-- Dropdowns -->
         <section id="dropdown-menus">
-            <h2>Menus Suspensos</h2>
+            <button class="open-doc title-button">Menus Suspensos</button>
             <div class="button-container">
+                <!-- Dropdown que abre para o lado -->
+                <div class="dropdown dropdown-side">
+                    <button class="dropdown-button">
+                        Menu Lateral <span class="caret">&#9654;</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Opção A</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a href="#">Opção B</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a href="#">Opção C</a></li>
+                    </ul>
+                </div>
                 <!-- Dropdown que abre para baixo -->
                 <div class="dropdown dropdown-down">
                     <button class="dropdown-button">
@@ -129,19 +144,97 @@
                         <li><a href="#">Opção 3</a></li>
                     </ul>
                 </div>
-        
-                <!-- Dropdown que abre para o lado -->
-                <div class="dropdown dropdown-side">
-                    <button class="dropdown-button">
-                        Menu Lateral <span class="caret">&#9654;</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Opção A</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li><a href="#">Opção B</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li><a href="#">Opção C</a></li>
-                    </ul>
+
+
+            </div>
+        </section>
+        <!-- Cards -->
+        <section id="info-cards">
+            <button class="open-doc title-button">Cards</button>
+            <div class="button-container">
+                <div class="card card-1">
+                    <h3>Card 1</h3>
+                    <p>Descrição breve do conteúdo do card.</p>
+                </div>
+                <div class="card card-2">
+                    <h3>Card 2</h3>
+                    <p>Descrição breve do conteúdo do card.</p>
+                </div>
+                <div class="card card-3">
+                    <h3>Card 3</h3>
+                    <p>Descrição breve do conteúdo do card.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Barra de progresso -->
+        <section id="progress-bars">
+            <button class="open-doc title-button">Barras de Progresso</button>
+            <div class="progress-container">
+                <!-- Barra de Progresso 1: Estilo Básico -->
+                <div class="progress-wrapper">
+                    <p>Progresso 1</p>
+                    <div class="progress-bar progress-bar-primary">
+                        <div class="progress" style="width: 70%;">70%</div>
+                    </div>
+                </div>
+
+                <!-- Barra de Progresso 2: Listras Estilizadas -->
+                <div class="progress-wrapper">
+                    <p>Progresso 2</p>
+                    <div class="progress-bar progress-bar-striped">
+                        <div class="progress" style="width: 50%;">50%</div>
+                    </div>
+                </div>
+
+                <!-- Barra de Progresso 3: Animação de Preenchimento -->
+                <div class="progress-wrapper">
+                    <p>Progresso 3</p>
+                    <div class="progress-bar progress-bar-animated">
+                        <div class="progress" style="width: 30%;">30%</div>
+                    </div>
+                </div>
+
+                <!-- Barra de Progresso 4: Gradiente -->
+                <div class="progress-wrapper">
+                    <p>Progresso 4</p>
+                    <div class="progress-bar progress-bar-gradient">
+                        <div class="progress" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay para escurecer o fundo -->
+            <div class="doc-popup-overlay"></div>
+
+            <!-- Popup Genérico -->
+            <div class="doc-popup">
+                <div class="doc-popup-content">
+                    <button class="close-doc">&times;</button>
+                    <h3 id="popup-title">Título da Documentação</h3>
+                    <p id="popup-description">Descrição do componente.</p>
+
+                    <!-- Botões de Exemplo -->
+                    <div class="example-buttons" id="example-buttons">
+                        <!-- Os botões de exemplo serão adicionados dinamicamente -->
+                    </div>
+
+                    <!-- Espaço para Exibir o Código -->
+                    <h4>Exemplo de Código:</h4>
+                    <div class="code-sections">
+                        <h5>HTML:</h5>
+                        <pre><code id="code-html"></code></pre>
+
+                        <h5>CSS:</h5>
+                        <pre><code id="code-css"></code></pre>
+
+                        <h5>JavaScript:</h5>
+                        <pre><code id="code-js"></code></pre>
+                    </div>
+
+                    <!-- Botões de Ação -->
+                    <div class="button-group">
+                        <button class="copy-code-btn">Copiar Código</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -161,5 +254,4 @@
         </ul>
     </div>
 </footer>
-
 </html>
