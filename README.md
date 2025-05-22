@@ -48,6 +48,54 @@ Este projeto foi desenvolvido como parte do meu portfólio front-end com os segu
 │   └── style.css        # Estilos do projeto
 ├── js/                  # Scripts (opcional)
 │   └── script.js
-├── img/                 # Imagens utilizadas
-│   └── screenshot.png
+├── imgs/                 # Imagens utilizadas
+│   └── previews.png
 └── README.md            # Documentação do projeto
+
+## 🌐 Deploy
+O projeto pode ser acessado diretamente em:
+➡️ [Acesse aqui o deploy do projeto](#)
+
+---
+
+## 📱 Responsividade
+- ✔️ **Desktop**
+- ✔️ **Tablet**
+- ✔️ **Mobile**
+
+O layout foi projetado utilizando **CSS Grid**, **Flexbox** e **media queries**, garantindo uma ótima experiência do usuário em diferentes tamanhos de tela.
+
+---
+
+## 🧠 Aprendizados
+Durante o desenvolvimento deste projeto, aprofundei conhecimentos em:
+- Estruturação semântica de páginas HTML.
+- Estilização moderna com foco em UX/UI.
+- Criação de layouts responsivos do zero.
+- Implementação de interatividade com JavaScript puro.
+- Organização de código limpo e escalável.
+- Melhores práticas em desenvolvimento front-end.
+
+---
+
+## 🔍 Próximas Melhorias (Backlog)
+- ✅ Adicionar temas (dark/light).
+- 🔲 Implementar busca interna dentro da documentação.
+- 🔲 Transformar em um template reutilizável para futuros projetos.
+- 🔲 Melhorar acessibilidade com ARIA e navegação via teclado.
+
+---
+
+## 🤝 Contribuindo
+Contribuições são sempre bem-vindas!  
+Sinta-se à vontade para abrir uma **issue**, propor melhorias ou realizar um **pull request**.
+
+---
+
+## 👨‍💻 Sobre Mim
+Desenvolvedor Front-End em formação, apaixonado por tecnologia, design e soluções criativas.  
+Estou em constante aprendizado, buscando oportunidades para colaborar com projetos desafiadores e inovadores.
+
+- 🌐 [Meu Portfólio](#)
+- 💼 [LinkedIn](#https://www.linkedin.com/in/pedro-eyer-104097266/)
+- 🐙 [GitHub](#https://github.com/Pedro-Eyer)
