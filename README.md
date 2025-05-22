@@ -58,7 +58,7 @@ Este projeto foi desenvolvido como parte do meu portfólio front-end com os segu
 ## 🌐 Deploy
 
 O projeto pode ser acessado diretamente em:  
-➡️ [Acesse aqui o deploy do projeto](#)
+➡️ [Acesse aqui o deploy do projeto](https://biblioteca-de-componente.pages.dev/)
 
 ---
 
