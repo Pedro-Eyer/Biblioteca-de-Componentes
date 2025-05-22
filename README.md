@@ -4,7 +4,7 @@
 Uma página web desenvolvida para simular uma documentação técnica, com foco em boas práticas de desenvolvimento front-end, responsividade, interatividade e experiência do usuário.
 
 ![Preview do Projeto](imgs/preview01.png) 
-(imgs/preview02.png) 
+![Preview do Projeto](imgs/preview02.png) 
 
 ---
 
