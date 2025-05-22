@@ -106,7 +106,7 @@ Sinta-se à vontade para abrir uma **issue**, propor melhorias ou realizar um **
 Desenvolvedor Front-End em formação, apaixonado por tecnologia, design e soluções criativas.  
 Estou em constante aprendizado, buscando oportunidades para colaborar com projetos desafiadores e inovadores.
 
-- 🌐 [Meu Portfólio](#)
+- 🌐 [Meu Portfólio](https://myportfolio-deveyer.pages.dev/)
 - 💼 [LinkedIn](https://www.linkedin.com/in/pedro-eyer-104097266/)
 - 🐙 [GitHub](https://github.com/Pedro-Eyer)
 
